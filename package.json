@@ -14,6 +14,7 @@
   "license": "MIT",
   "homepage": "https://kennymark.com",
   "dependencies": {
+    "@chakra-ui/icons": "^1.0.7",
     "@chakra-ui/react": "^1.1.6",
     "@chakra-ui/system": "^1.1.7",
     "@emotion/react": "^11.1.4",

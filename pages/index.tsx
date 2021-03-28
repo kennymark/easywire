@@ -1,16 +1,48 @@
+import { SimpleGrid, Text } from "@chakra-ui/react";
+import InfoCard from '../components/info-card';
 import Layout from "../components/layout";
-import SEO from "../components/seo";
-import { Flex, Box } from "@chakra-ui/react";
+import DataTable from '../components/table';
+import { BalanceIcon2, RefreshIcon, CheckIcon } from '../components/icons'
+
 
 function IndexPage() {
   return (
     <Layout>
-      <SEO title='Home' />
-      <Flex className="flex-col items-center justify-center">
-        <Box as='img' src="team-of-critters.svg" maxW='full' alt="Four one-eyed aliens playing" />
-      </Flex>
+
+      <Text fontSize='xl' mb={3} fontWeight='medium'>Overview</Text>
+
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={5}>
+        {cards.map(card => (<InfoCard card={card} />))}
+
+      </SimpleGrid>
+
+
+      <Text fontSize='xl' mt={10} mb={3} fontWeight='medium'>Recent activity</Text>
+
+      <DataTable />
     </Layout>
   );
 }
+
+const cards = [
+  {
+    title: 'Account balance',
+    icon: <BalanceIcon2 />,
+    amount: 30659.45
+  },
+  {
+    title: 'Pending',
+    icon: <RefreshIcon />,
+    amount: -19500.00
+  },
+
+  {
+    title: 'Processed (last 30 days)',
+    icon: <CheckIcon />,
+    amount: -20000.00
+  },
+]
+
+
 
 export default IndexPage;

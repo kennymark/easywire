@@ -1,8 +1,10 @@
-## Next Starter Lite by @kennymark
-Simple Next.js project for getting started on simple development
+## Easywire
+
+This is a demo application I built on a sunday after feeling inspired to code. This project is the code version this [`ui`]() by the tailwindui team. 
+It looked beautiful and complex so I felt challenged to build it in less than a day which I did. 
+
 
 ## Tech Stack
-
  - Chakra-ui
  - Next.js
  - Easy Peasy
@@ -10,3 +12,6 @@ Simple Next.js project for getting started on simple development
  - Testing with jest
  
 
+## Screenshot
+
+![](./screenshots/easywire.png)

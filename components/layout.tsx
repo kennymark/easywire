@@ -1,6 +1,10 @@
-import Header from "./nav";
+import Header from "./header";
 import Footer from "./footer";
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem } from '@chakra-ui/react'
+import React from 'react';
+import SEO from './seo';
+import Banner from './banner';
+import SidebarItems from './side-bar';
 
 
 interface Props {
@@ -8,16 +12,32 @@ interface Props {
   children?: any;
 }
 
-function Layout({ children, sm }: Props) {
+function Layout({ children, }: Props) {
   return (
     <Flex direction='column' >
-      <Header />
-      <Box mx='auto' p={4} maxH='full' minW={sm ? ['', 600] : ['', 700, 700, 900]} maxWidth={['', '', 1200]} minH='80vh'>
-        {children}
-      </Box>
+      <SEO title='EasyWire - Send money internationally' />
+
+      <Grid templateColumns="repeat(6, 1fr)">
+
+        <GridItem colSpan={{ base: 0, lg: 1 }} display={{ base: 'none', md: 'initial' }} h="100vh" bg="main" px={3} pos='sticky' top={0} bottom={0}>
+          <SidebarItems />
+        </GridItem>
+
+        <GridItem colSpan={{ base: 6, lg: 5 }}>
+          <Header />
+          <Banner />
+
+          <Box mx='auto' p={10} minH='80vh' bg='gray.100'>
+            {children}
+          </Box>
+
+        </GridItem>
+      </Grid>
+
       <Footer />
     </Flex>
   );
 }
+
 
 export default Layout;
