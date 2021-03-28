@@ -17,34 +17,6 @@ const customeTheme = extendTheme({
   },
 
   components: {
-    Button: {
-      baseStyle: {
-        borderRadius: 'lg',
-        _active: { border: 0, outline: 0 },
-        _focus: { outline: 0, border: '1px' },
-        _hover: { color: 'gray.900', bg: 'gray.500' },
-        _disabled: { bg: 'blue.900' }
-      },
-      defaultProps: {
-        variant: 'solid',
-        // size: 'lg'
-      },
-      variants: {
-        main: {
-          outline: 0,
-          type: 'submit',
-          color: 'gray.200',
-          _hover: { bg: 'gray.700' },
-          _active: { bg: 'gray.600' },
-          _focus: { outline: 0 },
-          variant: 'solid',
-          bg: 'gray.900',
-          width: '100%',
-          height: 55,
-          mt: 5
-        }
-      }
-    },
     Link: {
       baseStyle: {
         textDecoration: 'none'
