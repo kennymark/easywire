@@ -1,5 +1,4 @@
-import { extendTheme } from "@chakra-ui/react"
-
+import { extendTheme } from '@chakra-ui/react'
 
 const customeTheme = extendTheme({
   colors: {
@@ -12,20 +11,17 @@ const customeTheme = extendTheme({
     // heading: "IBM Plex Sans, sans-serif",
     // monospace: "Source Code Pro, monospace",
   },
-  fontSizes: {
-
-  },
+  fontSizes: {},
 
   components: {
     Link: {
       baseStyle: {
-        textDecoration: 'none'
+        textDecoration: 'none',
       },
     },
     Button: {
       baseStyle: {
         borderRadius: 'lg',
-
       },
       defaultProps: {
         // size: 'lg'
@@ -33,8 +29,8 @@ const customeTheme = extendTheme({
     },
     FormLabel: {
       baseStyle: {
-        color: 'gray.600'
-      }
+        color: 'gray.600',
+      },
     },
     Input: {
       baseStyle: {
@@ -55,24 +51,24 @@ const customeTheme = extendTheme({
             border: '1px',
             _disabled: {
               bg: 'gray.50',
-              cursor: 'not-allowed'
+              cursor: 'not-allowed',
             },
             _focus: { borderColor: 'green.900' },
-            _hover: { border: '1px', borderColor: 'gray.400' }
-          }
-        }
-      }
-    }
+            _hover: { border: '1px', borderColor: 'gray.400' },
+          },
+        },
+      },
+    },
   },
   config: {
     initialColorMode: 'light',
     useSystemColorMode: false,
   },
   styles: {
-    global: props => ({
-      "html, body": {
+    global: (props) => ({
+      'html, body': {
         textDecoration: 'none',
-        "*:focus": {
+        '*:focus': {
           outline: '0 !important',
           boxShadow: 'none !important',
         },
@@ -80,11 +76,10 @@ const customeTheme = extendTheme({
 
       pre: { fontFamily: 'monospace' },
       body: {
-
         bg: props.colorMode === 'light' ? 'white' : 'darkMode',
       },
     }),
-  }
+  },
 })
 
 export default customeTheme
